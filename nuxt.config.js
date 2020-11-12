@@ -34,7 +34,15 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    "nuxtjs/apollo"
   ],
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: "https://graphql.cosmicjs.com/v2"
+      }
+    }
+  }
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
