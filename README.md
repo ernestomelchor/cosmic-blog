@@ -1,5 +1,9 @@
 # blog-cosmic
 
+Built this blog using a headless CMS, with Nuxt.js, GraphQL, and Cosmic!
+The purpose of this project is to learn and implement these technologies.
+Sometimes you need to take a chance and explore something new.
+
 ## Build Setup
 
 ```bash
@@ -18,4 +22,5 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
 # cosmic-blog
