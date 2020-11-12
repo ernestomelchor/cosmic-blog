@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div class="w-8/12 mx-auto">
+  <nuxt-link to="/">
+    <div class="text-4xl">home</div>
+  </nuxt-link>
     <Nuxt />
   </div>
 </template>

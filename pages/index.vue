@@ -1,34 +1,26 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        blog-cosmic
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div class="container flex flex-col">
+    <h1>Full Static Site</h1>
+    <div v-for="obj in getObjects.objects" :key="obj.title">
+      <div class="border-solid my-10 p-10 bg-green-200">
+        <nuxt-link :to="'/blog/'+obj.slug">
+        <div class="text-6xl">{{ obj.title }} </div>
+        </nuxt-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import getObjects from "~/queries/getObjects";
+export default {
+  apollo: {
+    getObjects: {
+      prefetch: true,
+      query: getObjects,
+    },
+  },
+};
 </script>
 
 <style>
@@ -46,33 +38,4 @@ export default {}
   text-align: center;
 }
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
