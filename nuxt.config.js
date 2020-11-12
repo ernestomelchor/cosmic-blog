@@ -42,7 +42,7 @@ export default {
         httpEndpoint: "https://graphql.cosmicjs.com/v2"
       }
     }
-  }
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
